@@ -90,6 +90,10 @@ class ChatBlock
         }
         return $tempHtml;
     }
+    public static function renderCss()
+    {
+        return file_get_contents('../imessage.css');
+    }
     // Multimedia
     private function render_image_holder($dialogue)
     {
