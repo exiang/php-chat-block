@@ -1,13 +1,7 @@
 <?php
-namespace CTH\ChatBlock;
-/**
- * PHP Chat Block Component (0.0.1)
- * A dialogue chat block display component for php project.
- * A UI component for conversational novel community.
- * Date: 30 Aug, 2021
- * Author: Tang Hoong
- */
-class ChatUI
+namespace TangHoong\ChatBlock;
+
+class ChatBlock
 {
     public $colonList;
     public $narratorList;

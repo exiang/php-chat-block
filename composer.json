@@ -1,17 +1,21 @@
 {
-    "name": "tanghoong/php-chat-block",
-    "description": "an dialogue chat block display component for php project",
+    "name": "tanghoong/phpchatblock",
     "type": "library",
+    "description": "PHPChatBlock is a dialogue chat block display component class for PHP",
     "license": "MIT",
     "authors": [
         {
             "name": "Tang Hoong",
             "email": "tanghoong.com@gmail.com"
+        },
+        {
+            "name": "exiang"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "php": ">=7.4"
+    },
     "autoload": {
-        "psr-4": {"CTH\\ChatBlock\\": "src/"}
+        "psr-4": {"TangHoong\\ChatBlock\\": "src/"}
     }
 }

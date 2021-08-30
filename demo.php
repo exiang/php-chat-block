@@ -1,7 +1,6 @@
 <?php
 require 'vendor/autoload.php';
-// include './src/ChatBlock.php';
-use ChatBlock as ChatUI;
+use \TangHoong\ChatBlock\ChatBlock as ChatUI;
 
 // $sample = file_get_contents('./sample.txt');
 $sample = file_get_contents('./chapter.1.txt');
