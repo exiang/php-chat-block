@@ -1,6 +1,6 @@
-Adam: //i.imgur.com/pW71NE5.jpeg?color=red
-Eve: //i.imgur.com/Jvh1OQm.jpeg?color=blue
-Snake: //i.imgur.com/FEiFVeO.png?color=green
+Adam@https://i.imgur.com/pW71NE5.jpeg?color=red
+Eve@https://i.imgur.com/Jvh1OQm.jpeg?color=blue
+Snake@https://i.imgur.com/FEiFVeO.png?color=green
 ---
 
 Background: //filesamples.com/samples/audio/mp3/sample3.mp3
@@ -21,8 +21,11 @@ Narator: Thats why human <br>have been cast <b><i>away</i></b>.
 
 Narator: end of the story.FIN.👍
 
+Flipcard: //i.imgur.com/pW71NE5.jpeg?title=John+Doe&desc=Contrary to popular belief, Lorem Ipsum is not simply random text.
+Flipcard: //media1.giphy.com/media/144Q1gg0FkTEVG/giphy.gif?title=John+Doe&desc=Contrary to popular belief, Lorem Ipsum is not simply random text.
 Image: //i.imgur.com/pW71NE5.jpeg?color=red
 MP3: //filesamples.com/samples/audio/mp3/sample3.mp3
 Youtube: //www.youtube.com/embed/tgbNymZ7vqY?controls=0
+Decision: 左边,右边
 Decision: 左边,中间,右边,上面,下面
 
