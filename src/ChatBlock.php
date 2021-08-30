@@ -93,8 +93,8 @@ class ChatBlock
         {
             switch($dialogue['name'])
             {
-                case 'Narator': 
-                    $tempHtml .= $this->role_narator($dialogue);
+                case 'Narrator': 
+                    $tempHtml .= $this->role_narrator($dialogue);
                 break;
                 case 'Flipcard': 
                     $tempHtml .= $this->render_flipcard_holder($dialogue);
@@ -124,7 +124,9 @@ class ChatBlock
     }
     public static function renderCss()
     {
-        return file_get_contents('../imessage.css');
+        ob_start();
+        require 'imessage.css';
+        return ob_get_clean();
     }
     // Multimedia
     private function render_flipcard_holder($dialogue)
@@ -213,7 +215,7 @@ class ChatBlock
         // return false;
     }
     // Chat Blocks
-    private function role_narator($dialogue)
+    private function role_narrator($dialogue)
     {
         $sentence  = $this->fn_filter($dialogue['sentence']);
         $tempHtml  = '<p class="comment">'.$sentence.'</p>';

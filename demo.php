@@ -3,8 +3,8 @@ require 'vendor/autoload.php';
 use \TangHoong\ChatBlock\ChatBlock as ChatUI;
 
 // $sample = file_get_contents('./sample.txt');
-$sample = file_get_contents('./chapter.1.txt');
-// $sample = file_get_contents('./sample.2.txt');
+// $sample = file_get_contents('./chapter.1.txt');
+$sample = file_get_contents('./sample.2.txt');
 ?>
 
 
@@ -20,12 +20,13 @@ $sample = file_get_contents('./chapter.1.txt');
         <title>Text soap</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="imessage.css">
+        <!-- <link rel="stylesheet" href="imessage.css"> -->
     </head>
     <body>
         <div class="container" id="chatUI">
         <?php
         $cb = new ChatUI();
+        echo sprintf('<style>%s</style>', $cb->renderCss());
         // $cb->setColon([':','：']);
         // $cb->setColon([':','：']);
         // $cb->setNarrator(['Narrator', 'narrator', '系统']);
