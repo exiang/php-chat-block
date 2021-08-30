@@ -23,7 +23,7 @@ $sample = file_get_contents('./sample.2.txt');
         <!-- <link rel="stylesheet" href="imessage.css"> -->
     </head>
     <body>
-        <div class="container" id="chatUI">
+        
         <?php
         $cb = new ChatUI();
         echo sprintf('<style>%s</style>', $cb->renderCss());
@@ -33,6 +33,6 @@ $sample = file_get_contents('./sample.2.txt');
         $cb->feed($sample);
         echo $cb->render();
         ?>
-        </div>
+        
     </body>
 </html>

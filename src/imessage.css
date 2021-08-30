@@ -1,17 +1,17 @@
-.imessage {
+.chatblock .imessage {
     background-color: #fff;
     /* border: 1px solid #e5e5ea; */
     border-radius: 0.25rem;
     display: flex;
     flex-direction: column;
-    font-family: "SanFrancisco";
+    font-family: inherit;
     font-size: 1.25rem;
     margin: 0 auto 1rem;
     max-width: 600px;
     padding: 0.5rem 1.5rem;
   }
   
-  .imessage p {
+  .chatblock .imessage p {
     border-radius: 1.15rem;
     line-height: 1.25;
     max-width: 75%;
@@ -20,28 +20,28 @@
     word-wrap: break-word;
   }
   
-  .imessage p::before,
-  .imessage p::after {
+  .chatblock .imessage p::before,
+  .chatblock .imessage p::after {
     bottom: -0.1rem;
     content: "";
     height: 1rem;
     position: absolute;
   }
   
-  p.from-me {
+  .chatblock p.from-me {
     align-self: flex-end;
     background-color: #248bf5;
     color: #fff; 
   }
   
-  p.from-me::before {
+  .chatblock p.from-me::before {
     border-bottom-left-radius: 0.8rem 0.7rem;
     border-right: 1rem solid #248bf5;
     right: -0.35rem;
     transform: translate(0, -0.1rem);
   }
   
-  p.from-me::after {
+  .chatblock p.from-me::after {
     background-color: #fff;
     border-bottom-left-radius: 0.5rem;
     right: -40px;
@@ -49,37 +49,37 @@
     width: 10px;
   }
   
-  p[class^="from-"] {
+  .chatblock p[class^="from-"] {
     margin: 0.5rem 0;
     width: fit-content;
   }
   
-  p.from-me ~ p.from-me {
+  .chatblock p.from-me ~ p.from-me {
     margin: 0.25rem 0 0;
   }
   
-  p.from-me ~ p.from-me:not(:last-child) {
+  .chatblock p.from-me ~ p.from-me:not(:last-child) {
     margin: 0.25rem 0 0;
   }
   
-  p.from-me ~ p.from-me:last-child {
+  .chatblock p.from-me ~ p.from-me:last-child {
     margin-bottom: 0.5rem;
   }
   
-  p.from-them {
+  .chatblock p.from-them {
     align-items: flex-start;
     background-color: #e5e5ea;
     color: #000;
   }
   
-  p.from-them:before {
+  .chatblock p.from-them:before {
     border-bottom-right-radius: 0.8rem 0.7rem;
     border-left: 1rem solid #e5e5ea;
     left: -0.35rem;
     transform: translate(0, -0.1rem);
   }
   
-  p.from-them::after {
+  .chatblock p.from-them::after {
     background-color: #fff;
     border-bottom-right-radius: 0.5rem;
     left: 20px;
@@ -87,66 +87,45 @@
     width: 10px;
   }
   
-  p[class^="from-"].emoji {
+  .chatblock p[class^="from-"].emoji {
     background: none;
     font-size: 2.5rem;
   }
   
-  p[class^="from-"].emoji::before {
+  .chatblock p[class^="from-"].emoji::before {
     content: none;
   }
   
-  .no-tail::before {
+  .chatblock .no-tail::before {
     display: none;
   }
   
-  .margin-b_none {
+  .chatblock .margin-b_none {
     margin-bottom: 0 !important;
   }
   
-  .margin-b_one {
+  .chatblock .margin-b_one {
     margin-bottom: 1rem !important;
   }
   
-  .margin-t_one {
+  .chatblock .margin-t_one {
     margin-top: 1rem !important;
   }
   
   
-  /* general styling */
-  @font-face {
-    font-family: "SanFrancisco";
-    src:
-      url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff2") format("woff2"),
-      url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
-  }
   
-  body {  
-    font-family: -apple-system, 
-      BlinkMacSystemFont, 
-      "Segoe UI", 
-      Roboto, 
-      Oxygen-Sans, 
-      Ubuntu, 
-      Cantarell, 
-      "Helvetica Neue", 
-      sans-serif;
-    font-weight: normal;
-    margin: 0;
-  }
-  
-  .container {
+  .chatblock .container {
     margin: 0 auto;
     max-width: 600px;
     padding: 1rem;
   }
   
-  h1 {
+  .chatblock h1 {
     font-weight: normal;
     margin-bottom: 0.5rem;
   }
   
-  h2 {
+  .chatblock h2 {
     border-bottom: 1px solid #e5e5ea;
     color: #666;
     font-weight: normal;
@@ -154,7 +133,7 @@
     padding-bottom: 1.5rem;
   }
   
-  .comment {
+  .chatblock .comment {
     color: #222;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -164,69 +143,66 @@
   }
   
   @media screen and (max-width: 800px) {
-    body {
-      margin: 0 0.5rem;
-    }
   
-    .container {
+    .chatblock .container {
       padding: 0.5rem;
     }
   
-    .imessage {
+    .chatblock .imessage {
       font-size: 1.05rem;
       margin: 0 auto 1rem;
       max-width: 600px;
       padding: 0.25rem 0.875rem;
     }
   
-    .imessage p {
+    .chatblock .imessage p {
       margin: 0.5rem 0;
     }
   }
 
 
   /* chat-header */
-  .imessage .chat-header {
+.chatblock .imessage .chat-header {
     border-radius: 30px;    
     width: 20px;
     height: 20px;
     margin: 3px;
 }
-.imessage .chat-name{
+.chatblock .imessage .chat-name{
     font-weight: bold;
     display: flex;
     align-items: center;
 }
-.imessage .chat-name-me{
+.chatblock .imessage .chat-name-me{
     text-align: right;
     flex-direction: row-reverse;
 }
-.imessage .chat-name-them{
+.chatblock .imessage .chat-name-them{
     text-align: left;
 }
 
-.imessage .text-center{
+.chatblock .imessage .text-center{
   text-align: center;
 }
 
-.imessage .text-bold{
+.chatblock .imessage .text-bold{
   font-weight: bold;
 }
 
-.imessage .text-muted{
+.chatblock .imessage .text-muted{
   font-size: 12px;
   margin: 5px;
 }
 
-.container-image{
+.chatblock .container-image{
   max-width: 400px;
   margin: auto;
 }
 
-.container-image img{
+.chatblock .container-image img{
   border-radius: 1.15rem;
 }
-.container-mp3{
+.chatblock .container-mp3{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,20 +215,20 @@
   font-size: 12px;
   margin: 5px;
 }
-.container-youtube{
+.chatblock .container-youtube{
   height: 300px;
   width: 400px;
   margin: auto;
 }
-.container-youtube iframe{
+.chatblock .container-youtube iframe{
   border-radius: 1.15rem;
 }
-.container-decision{
+.chatblock .container-decision{
   display: flex;
   justify-content: space-between;
 }
 
-.container-decision .decision-option{
+.chatblock .container-decision .decision-option{
   cursor: pointer;
   background-color: #e5e5ea;
   color: #000;
@@ -265,8 +241,8 @@
   text-align: center;
 }
 
-.container-decision .decision-option:focus,
-.container-decision .decision-option:hover{
+.chatblock .container-decision .decision-option:focus,
+.chatblock .container-decision .decision-option:hover{
   background-color: #bdbdbe;
 }
 
@@ -274,7 +250,7 @@
 *
 */
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
+.chatblock .flip-card {
   background-color: transparent;
   width: 400px;
   height: 400px;
@@ -284,7 +260,7 @@
 }
 
 /* This container is needed to position the front and back side */
-.flip-card-inner {
+.chatblock .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -294,12 +270,12 @@
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+.chatblock .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.chatblock .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -308,13 +284,13 @@
 }
 
 /* Style the front side (fallback if image is missing) */
-.flip-card-front {
+.chatblock .flip-card-front {
   background-color: #bbb;
   color: black;
 }
 
 /* Style the back side */
-.flip-card-back {
+.chatblock .flip-card-back {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);

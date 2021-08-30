@@ -88,7 +88,7 @@ class ChatBlock
      * Using default html rendered chat blocks
      */
     public function render(){
-        $tempHtml = '';
+        $tempHtml = '<div class="chatblock">';
         foreach($this->dialogue['lines'] as $dialogue)
         {
             switch($dialogue['name'])
@@ -120,6 +120,7 @@ class ChatBlock
                 break;
             }
         }
+        $tempHtml .= '</div>';
         return $tempHtml;
     }
     public static function renderCss()
