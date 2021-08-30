@@ -1,6 +1,6 @@
-妖猫: //i.imgur.com/Jvh1OQm.jpeg?color=blue
-大蛇丸: //i.imgur.com/FEiFVeO.png?color=green
-天狗: //i.imgur.com/pW71NE5.jpeg?color=red
+妖猫@//i.imgur.com/Jvh1OQm.jpeg?color=blue
+大蛇丸@//i.imgur.com/FEiFVeO.png?color=green
+天狗@//i.imgur.com/pW71NE5.jpeg?color=red
 ---
 Background: //www.yummy-sounds.com/data/music/music/zoomplayer/2-0521_Lino_Rise_Media_-_Steve_Sin_City_layout.mp3
 Narator: 日本，云间里的破庙...
@@ -9,6 +9,7 @@ Narator: 日本，云间里的破庙...
 
 大蛇丸: 哎哟！我的鳞片都被你刮掉了！我的妈呀！滑头油舌头术！
 妖猫: 好滑~四肢脚都站立不定，没法结印。我撤！
+Narator: 滋滋滋滋
 Narator: 滋滋滋滋
 妖猫: 怎么有结界？
 大蛇丸: 呵呵，你天真啊！以为我千年来是如何镇守这里？飞🐍缠身擒拿法！

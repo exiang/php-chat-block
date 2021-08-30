@@ -9,11 +9,18 @@
  */
 class ChatBlock
 {
+    public $colonList;
+    public $narratorList;
     public $roles;
     public $lines;
     public $dialogue;
-    function __construct($data='')
+    function __construct()
     {
+        // 
+    }
+    public function feed($data='')
+    {
+        // $this->colonList = [':','：'];
         $chat['casts']  = 0;
         $chat['dialog'] = 0;
         $chat['roles']  = [];
@@ -26,11 +33,18 @@ class ChatBlock
         foreach($rolesArray as $roleKey => $roleVal)
         {
             $tempCast = [];
-            $tempArray = explode(":",$roleVal);
-            list($name, $img) = $tempArray;
-            $tempCast['name']  = $name;
-            $tempCast['img']   = $img;
-            array_push($chat['roles'],$tempCast);
+            // foreach($this->colonList as $colon)
+            // {
+                $tempArray = explode("@",$roleVal);
+                if(isset($tempArray))
+                {
+                    // var_dump($tempArray);
+                    list($name, $img) = $tempArray;
+                    $tempCast['name']  = $name;
+                    $tempCast['img']   = $img;
+                    array_push($chat['roles'],$tempCast);
+                }
+            // }
         }
         // structure lines
         $linesArray = array_values(array_filter(explode(PHP_EOL,$linesData)));
@@ -40,11 +54,20 @@ class ChatBlock
             {
                 $chat['dialog'] = $chat['dialog'] + 1;
                 $tempLine = [];
-                $tempArray = explode(":",$lineVal);
-                list($name, $sentence) = $tempArray;
-                $tempLine['name']  = $name;
-                $tempLine['sentence']   = $sentence;
-                array_push($chat['lines'],$tempLine);
+                // foreach($this->colonList as $colon)
+                // {
+                    // var_dump($colon);
+                    // $tempArray = explode($colon,$lineVal);
+                    $tempArray = explode(":",$lineVal);
+                    if(isset($tempArray))
+                    {
+                        // var_dump($tempArray);
+                        list($name, $sentence) = $tempArray;
+                        $tempLine['name']  = $name;
+                        $tempLine['sentence']   = $sentence;
+                        array_push($chat['lines'],$tempLine);
+                    }
+                // }
             }
         }
         $this->dialogue = $chat;
@@ -56,9 +79,21 @@ class ChatBlock
         return json_encode($this->dialogue);
     }
     /**
+     * Set Colon
+     */
+    public function setColon($colonArray = []){
+        $this->colonList = $colonArray;
+    }
+    /**
+     * Set Colon
+     */
+    public function setNarrator($narratorArray = []){
+        $this->narratorList = $narratorArray;
+    }
+    /**
      * Using default html rendered chat blocks
      */
-    public function read(){
+    public function render(){
         $tempHtml = '';
         foreach($this->dialogue['lines'] as $dialogue)
         {
@@ -66,6 +101,9 @@ class ChatBlock
             {
                 case 'Narator': 
                     $tempHtml .= $this->role_narator($dialogue);
+                break;
+                case 'Flipcard': 
+                    $tempHtml .= $this->render_flipcard_holder($dialogue);
                 break;
                 case 'Image': 
                     $tempHtml .= $this->render_image_holder($dialogue);
@@ -91,6 +129,33 @@ class ChatBlock
         return $tempHtml;
     }
     // Multimedia
+    private function render_flipcard_holder($dialogue)
+    {
+        $link = $this->fn_valid_link($dialogue['sentence']);
+        $url_components = parse_url($link);
+        parse_str($url_components['query'], $params);
+        $title = (isset($params['title'])?str_replace('+',' ',$params['title']):null);
+        $desc = (isset($params['desc'])?str_replace('+',' ',$params['desc']):null);
+        $tempHtml   = '';
+        $tempHtml  .= '<div class="flip-card">';
+        $tempHtml  .= '<div class="flip-card-inner">';
+        $tempHtml  .= '<div class="flip-card-front">';
+        $tempHtml  .= '<img src="'.$link.'" alt="Flipcard" style="width:100%;height:100%;">';
+        $tempHtml  .= '</div>';
+        $tempHtml  .= '<div class="flip-card-back">';
+        if($title)
+        {
+            $tempHtml  .= '<h1>'.$title.'</h1>';
+        }
+        if($desc)
+        {
+            $tempHtml  .= '<p>'.$desc.'</p>';
+        }
+        $tempHtml  .= '</div>';
+        $tempHtml  .= '</div>';
+        $tempHtml  .= '</div>';
+        return $tempHtml;
+    }
     private function render_image_holder($dialogue)
     {
         $link = $this->fn_valid_link($dialogue['sentence']);
@@ -103,7 +168,7 @@ class ChatBlock
     {
         $link = $this->fn_valid_link($dialogue['sentence']);
         $tempHtml   = '<div class="container-mp3">';
-        $tempHtml  .= '<audio controls style="width:100%;">';
+        $tempHtml  .= '<audio controls loop style="width:100%;">';
         $tempHtml  .= '<source src="'.$link.'" type="audio/mpeg">';
         $tempHtml  .= 'Your browser does not support the audio element.';
         $tempHtml  .= '</audio>';
@@ -118,14 +183,14 @@ class ChatBlock
     {
         $link = $this->fn_valid_link($dialogue['sentence']);
         $tempHtml   = '<div class="container-youtube">';
-        $tempHtml  .= '<iframe frameborder="0" width="90%" height="90%" src="'.$link.'"></iframe>';
+        $tempHtml  .= '<iframe frameborder="0" width="100%" height="90%" src="'.$link.'"></iframe>';
         $tempHtml  .= '</div>';
         return $tempHtml;
     }
     private function render_decisions_holder($dialogue)
     {
         $optionList = explode(',',$dialogue['sentence']);
-        $tempHtml   = '<p class="comment">Your decisions are</p>';
+        $tempHtml   = '<p class="text-center comment">Your decisions are</p>';
         $tempHtml  .= '<div class="container-decision">';
         foreach($optionList as $option)
         {

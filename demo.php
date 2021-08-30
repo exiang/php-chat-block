@@ -24,10 +24,13 @@ $sample = file_get_contents('./chapter.1.txt');
     </head>
     <body>
         <div class="container" id="chatUI">
-        <h1>Novel Title</h1>
         <?php
-        $cb = new ChatUI($sample);
-        echo $cb->read();
+        $cb = new ChatUI();
+        // $cb->setColon([':','：']);
+        // $cb->setColon([':','：']);
+        // $cb->setNarrator(['Narrator', 'narrator', '系统']);
+        $cb->feed($sample);
+        echo $cb->render();
         ?>
         </div>
     </body>
