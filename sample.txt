@@ -1,16 +1,27 @@
-Adam: https://i.imgur.com/pW71NE5.jpeg
-Eve: https://i.imgur.com/Jvh1OQm.jpeg
-Snake: https://i.imgur.com/FEiFVeO.png
+Adam: //i.imgur.com/pW71NE5.jpeg?color=red
+Eve: //i.imgur.com/Jvh1OQm.jpeg?color=blue
+Snake: //i.imgur.com/FEiFVeO.png?color=green
 ---
+Background: //filesamples.com/samples/audio/mp3/sample3.mp3
 Narator: Once upon a time...
 Snake: Wanna eat apple 苹果 🍎🍎🍎?
 Eve: Ya sure, why not? why not? why not? why not? why not? why not? why not? why not? why not? why not? why not?
 Narator: Eve took the apple and bite.
 Adam: Dont! Dont! Dont! Dont! Dont! Dont! Dont! Dont! Dont! 
 Snake: It is too late! hahaha!
-Narator: Thats why human have been cast away away away away away away away away away away away away away.
-Narator: Thats why human have been cast away.
-Narator: Thats why human have been cast away.
-Narator: Thats why human have been cast away.
-Narator: Thats why human have been cast away.
+Tiger: It is too late! hahaha!
+Dog: It is too late! hahaha!
+Cat: It is too late! hahaha!
+Narator: Thats why human have been cast <u>away away away away away away away away away away away away away</u>.
+Narator: Thats why human have been cast <b>away</b>.
+Narator: Thats why human <a href="#here">Here</a> have been cast <i>away</i>.
+Narator: Thats why human <br>have been cast <b><i>away</i></b>.
+
 Narator: end of the story.FIN.👍
+
+
+Image: //i.imgur.com/pW71NE5.jpeg?color=red
+MP3: //filesamples.com/samples/audio/mp3/sample3.mp3
+Youtube: //www.youtube.com/embed/tgbNymZ7vqY?controls=0
+Decision: 左边,中间,右边,上面,下面
+

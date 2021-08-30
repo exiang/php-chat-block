@@ -1,8 +1,7 @@
-# PHP Chat UI
-PHP Class for simulate conversation dialog.
-
+# PHP Chat Block
+A dialogue chat block display component for php project.
 A UI component for conversational novel community.
-
+Date: 30 Aug, 2021
 Author: Tang Hoong
 
 # Screenshot
@@ -10,7 +9,7 @@ Author: Tang Hoong
 ![](sample-02.png "sample")
 
 # Description
-Just dump the string format which same as sample.txt then ChatUIClass will render them perfect and nice.
+Just dump the string format which exactly same as sample.txt then ChatBlock will render them into perfect and nice chat blocks.
 
 # How
 Follow the format from sample.txt:
@@ -22,10 +21,10 @@ Snake: Wanna eat apple 苹果 🍎🍎🍎?
 ```
 then
 ```
-include 'ChatUIClass.php';
-$sample = file_get_contents('./sample.txt');
-$dialogue = new ChatUI($sample);
-echo $dialogue->read();
+include 'ChatBlock.php';
+$lines = file_get_contents('./chapter-1.txt');
+$cb = new ChatBlock($lines);
+echo $cb->read();
 ```
 become
 

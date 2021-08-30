@@ -204,3 +204,67 @@
 .imessage .chat-name-them{
     text-align: left;
 }
+
+.imessage .text-center{
+  text-align: center;
+}
+
+.imessage .text-bold{
+  font-weight: bold;
+}
+
+.imessage .text-muted{
+  font-size: 12px;
+  margin: 5px;
+}
+
+.container-image{
+  padding: 30px;
+}
+
+.container-image img{
+  border-radius: 1.15rem;
+}
+.container-mp3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  padding: 0.5rem .875rem;
+  position: relative;
+  word-wrap: break-word;
+  font-size: 12px;
+  margin: 5px;
+}
+.container-youtube{
+  height: 300px;
+  width: 400px;
+  margin: 0px auto;
+}
+.container-youtube iframe{
+  border-radius: 1.15rem;
+}
+.container-decision{
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-decision .decision-option{
+  cursor: pointer;
+  background-color: #e5e5ea;
+  color: #000;
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  padding: 0.5rem .875rem;
+  margin: 0 auto 1rem;
+  position: relative;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.container-decision .decision-option:focus,
+.container-decision .decision-option:hover{
+  background-color: #bdbdbe;
+}
