@@ -1,5 +1,5 @@
 <?php
-// namespace ChatBlock;
+namespace CTH\ChatBlock;
 /**
  * PHP Chat Block Component (0.0.1)
  * A dialogue chat block display component for php project.
@@ -7,7 +7,7 @@
  * Date: 30 Aug, 2021
  * Author: Tang Hoong
  */
-class ChatBlock
+class ChatUI
 {
     public $colonList;
     public $narratorList;

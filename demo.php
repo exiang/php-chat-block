@@ -1,5 +1,6 @@
 <?php
-include './src/ChatBlock.php';
+require 'vendor/autoload.php';
+// include './src/ChatBlock.php';
 use ChatBlock as ChatUI;
 
 // $sample = file_get_contents('./sample.txt');
