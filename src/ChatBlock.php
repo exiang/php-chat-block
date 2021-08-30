@@ -7,7 +7,7 @@ namespace CTH\ChatBlock;
  * Date: 30 Aug, 2021
  * Author: Tang Hoong
  */
-class ChatUI
+class ChatBlock
 {
     public $colonList;
     public $narratorList;
