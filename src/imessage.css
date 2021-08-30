@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     font-family: inherit;
-    font-size: 1.25rem;
+    font-size: inherit;
     margin: 0 auto 1rem;
     max-width: 600px;
     padding: 0.5rem 1.5rem;
@@ -13,7 +13,7 @@
   
   .chatblock .imessage p {
     border-radius: 1.15rem;
-    line-height: 1.25;
+    line-height: 1.75;
     max-width: 75%;
     padding: 0.5rem .875rem;
     position: relative;
@@ -135,10 +135,10 @@
   
   .chatblock .comment {
     color: #222;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     line-height: 1.5;
-    margin-bottom: 1.25rem;
-    max-width: 100%;
+    margin: 1.25rem auto;
+    max-width: 90%;
     padding: 0;
   }
   
@@ -149,7 +149,7 @@
     }
   
     .chatblock .imessage {
-      font-size: 1.05rem;
+      font-size: inherit;
       margin: 0 auto 1rem;
       max-width: 600px;
       padding: 0.25rem 0.875rem;
@@ -190,7 +190,7 @@
 }
 
 .chatblock .imessage .text-muted{
-  font-size: 12px;
+  font-size: 1.15rem;
   margin: 5px;
 }
 
@@ -212,7 +212,7 @@
   padding: 0.5rem .875rem;
   position: relative;
   word-wrap: break-word;
-  font-size: 12px;
+  font-size: 1.15rem;
   margin: 5px;
 }
 .chatblock .container-youtube{
