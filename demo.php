@@ -2,7 +2,8 @@
 include './src/ChatBlock.php';
 use ChatBlock as ChatUI;
 
-$sample = file_get_contents('./sample.txt');
+// $sample = file_get_contents('./sample.txt');
+$sample = file_get_contents('./chapter.1.txt');
 // $sample = file_get_contents('./sample.2.txt');
 ?>
 
@@ -23,7 +24,7 @@ $sample = file_get_contents('./sample.txt');
     </head>
     <body>
         <div class="container" id="chatUI">
-        <h1>打赏宣言#1</h1>
+        <h1>Novel Title</h1>
         <?php
         $cb = new ChatUI($sample);
         echo $cb->read();

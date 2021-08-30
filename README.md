@@ -22,7 +22,7 @@ Snake: Wanna eat apple 苹果 🍎🍎🍎?
 then
 ```
 include 'ChatBlock.php';
-$lines = file_get_contents('./chapter-1.txt');
+$lines = file_get_contents('./chapter.1.txt');
 $cb = new ChatBlock($lines);
 echo $cb->read();
 ```
