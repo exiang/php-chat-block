@@ -11,6 +11,13 @@ Author: Tang Hoong
 # Description
 Just dump the string format which exactly same as sample.txt then ChatBlock will render them into perfect and nice chat blocks.
 
+# Composer Package
+```
+composer require tanghoong/php-chat-block
+```
+
+More details here: https://packagist.org/packages/tanghoong/php-chat-block
+
 # How
 Follow the format from sample.txt:
 ```
