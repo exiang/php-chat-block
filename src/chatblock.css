@@ -65,7 +65,13 @@
   .chatblock p.from-me ~ p.from-me:last-child {
     margin-bottom: 0.5rem;
   }
-  
+
+  .chatblock p.narrator {
+    background-color: #cccccc;
+    color: #000;
+    max-width: 100%;
+  }
+
   .chatblock p.from-them {
     align-items: flex-start;
     background-color: #e5e5ea;
@@ -112,14 +118,18 @@
     margin-top: 1rem !important;
   }
   
-  
+  .chatblock pre {
+    background-color: #cccccc;
+    padding: 0.5rem;
+    white-space: break-spaces;
+  }
   
   .chatblock .container {
     margin: 0 auto;
     max-width: 600px;
     padding: 1rem;
   }
-  
+/*   
   .chatblock h1 {
     font-weight: normal;
     margin-bottom: 0.5rem;
@@ -131,7 +141,7 @@
     font-weight: normal;
     margin-top: 0;
     padding-bottom: 1.5rem;
-  }
+  } */
   
   .chatblock .comment {
     color: #222;
@@ -206,10 +216,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #000;
+  color: #999999;
   border-radius: 1.15rem;
-  line-height: 1.25;
-  padding: 0.5rem .875rem;
+  line-height: 1.75;
+  padding: 0.875rem;
   position: relative;
   word-wrap: break-word;
   font-size: 1.15rem;
@@ -291,7 +301,11 @@
 
 /* Style the back side */
 .chatblock .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #1ab394;
   color: white;
   transform: rotateY(180deg);
+}
+
+.chatblock .flip-card-back p{
+  margin: 1em;
 }
